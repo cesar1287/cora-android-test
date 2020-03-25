@@ -4,6 +4,8 @@ apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
 
+apply plugin: 'kotlin-kapt'
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -45,7 +47,8 @@ dependencies {
     //jetpack
     api "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle}"
     api "androidx.lifecycle:lifecycle-common-java8:${versions.lifecycle}"
-    api "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+    api "androidx.room:room-runtime:${versions.room}"
+    kapt "androidx.room:room-compiler:${versions.room}"
 
     //core
     api "androidx.appcompat:appcompat:${versions.appCompat}"
