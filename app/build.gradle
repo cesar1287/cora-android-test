@@ -54,6 +54,10 @@ dependencies {
     api "com.google.android.material:material:${versions.material}"
     api "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
 
+    //Dependency injection
+    api "org.koin:koin-android:${versions.koin}"
+    api "org.koin:koin-androidx-viewmodel:${versions.koin}"
+
     //tests
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
