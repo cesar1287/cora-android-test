@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:dist="http://schemas.android.com/apk/distribution"
     package="com.github.coraandroidtest.home">
@@ -8,7 +9,19 @@
         <dist:delivery>
             <dist:install-time />
         </dist:delivery>
+
         <dist:fusing dist:include="true" />
     </dist:module>
-</manifest>
 
+    <application>
+        <activity android:name=".view.HomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <action android:name="action.home.open"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
