@@ -12,6 +12,13 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tvContactCpf"
+        app:layout_constraintEnd_toStartOf="@+id/vwContactNewContact"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:textColor="@color/dark_pink"
+        android:textSize="@dimen/default_name_size"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginTop="@dimen/xdefaultMargin"
         tools:text="Cesar Rodrigues"/>
 
     <TextView
@@ -20,6 +27,44 @@
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/tvContactName"
         app:layout_constraintStart_toStartOf="parent"
-        tools:text="123.456.789-11" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/vwContactNewContact"
+        app:layout_constraintHorizontal_bias="0.0"
+        android:textColor="@color/light_black"
+        android:textSize="@dimen/default_cpf_size"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginTop="@dimen/xminimumMargin"
+        android:layout_marginBottom="@dimen/xdefaultMargin"
+        tools:text="CPF: 123.456.789-11" />
+
+    <FrameLayout
+        android:id="@+id/vwContactNewContact"
+        android:layout_width="46dp"
+        android:layout_height="28dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivContactArrow"
+        android:layout_marginEnd="@dimen/defaultMargin"
+        android:background="@drawable/rectangle_new_contact"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Novo"
+            android:textSize="@dimen/text_12_sp"
+            android:textColor="@color/light_black"
+            android:layout_gravity="center"/>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ivContactArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_margin="@dimen/largeMargin"
+        android:src="@drawable/ic_keyboard_arrow_right"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
