@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="RecyclerViewTitle">
+        <item name="android:textColor">@color/dark_pink</item>
+        <item name="android:textSize">@dimen/default_name_size</item>
+        <item name="android:layout_marginStart">@dimen/largeMargin</item>
+        <item name="android:layout_marginTop">@dimen/xdefaultMargin</item>
+    </style>
+
+    <style name="RecyclerViewSubtitle">
+        <item name="android:textColor">@color/light_black</item>
+        <item name="android:textSize">@dimen/default_cpf_size</item>
+        <item name="android:layout_marginStart">@dimen/largeMargin</item>
+        <item name="android:layout_marginTop">@dimen/xminimumMargin</item>
+        <item name="android:layout_marginBottom">@dimen/xdefaultMargin</item>
+    </style>
+
 </resources>
