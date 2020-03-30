@@ -58,6 +58,7 @@ dependencies {
     //support
     api "com.google.android.material:material:${versions.material}"
     api "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
+    api 'androidx.legacy:legacy-support-v4:1.0.0'
 
     //Dependency injection
     api "org.koin:koin-android:${versions.koin}"

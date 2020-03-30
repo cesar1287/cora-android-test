@@ -18,6 +18,7 @@ buildscript {
             'glide'                 : '4.8.0',
             'multidex'              : '1.0.3',
             'circleImageView'       : '3.0.1',
+            'navigation'            : '2.3.0-alpha04',
             'koin'                  : '2.0.1'
     ]
 
