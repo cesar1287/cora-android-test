@@ -14,4 +14,7 @@
     <dimen name="default_cpf_size">14sp</dimen>
 
     <dimen name="text_12_sp">12sp</dimen>
+    <dimen name="text_14_sp">14sp</dimen>
+
+    <dimen name="height_toolbar_tracking">4dp</dimen>
 </resources>

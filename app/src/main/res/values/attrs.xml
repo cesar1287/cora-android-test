@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ToolbarCora">
+        <attr name="toolbarType" format="enum">
+            <enum name="contacts" value="0" />
+            <enum name="new_contact" value="1" />
+        </attr>
+        <attr name="titleToolbarCora" format="string" />
+        <attr name="progressToolbarCora" format="integer" />
+    </declare-styleable>
+</resources>

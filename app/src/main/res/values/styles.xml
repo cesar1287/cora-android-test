@@ -23,4 +23,16 @@
         <item name="android:layout_marginBottom">@dimen/xdefaultMargin</item>
     </style>
 
+    <style name="ToolbarItauView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">?attr/actionBarSize</item>
+    </style>
+
+    <style name="ToolbarTrackingProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/height_toolbar_tracking</item>
+        <item name="android:progressDrawable">@drawable/progress_toolbaritau_tracking</item>
+    </style>
+
 </resources>
