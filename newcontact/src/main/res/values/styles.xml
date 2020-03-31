@@ -23,7 +23,7 @@
         <item name="android:layout_marginBottom">@dimen/xdefaultMargin</item>
     </style>
 
-    <style name="ToolbarCoraView">
+    <style name="ToolbarItauView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">?attr/actionBarSize</item>
@@ -33,15 +33,6 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/height_toolbar_tracking</item>
         <item name="android:progressDrawable">@drawable/progress_toolbaritau_tracking</item>
-    </style>
-
-    <style name="EditTextCora" parent="Base.Widget.AppCompat.EditText">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:background">@android:color/transparent</item>
-        <item name="android:textSize">@dimen/default_title_new_contact_size</item>
-        <item name="android:textColor">@color/light_black</item>
-        <item name="android:textColorHint">@color/dark_gray</item>
     </style>
 
 </resources>

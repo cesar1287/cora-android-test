@@ -8,4 +8,16 @@
         <attr name="titleToolbarCora" format="string" />
         <attr name="progressToolbarCora" format="integer" />
     </declare-styleable>
+
+    <declare-styleable name="EditTextCora">
+        <attr name="fieldType" format="enum">
+            <enum name="none" value="0" />
+            <enum name="cpf" value="1" />
+            <enum name="name" value="2" />
+            <enum name="number" value="3" />
+        </attr>
+        <attr name="maxLength" format="integer" />
+        <attr name="placeholder" format="string" />
+        <attr name="forcedPlaceholder" format="boolean" />
+    </declare-styleable>
 </resources>
