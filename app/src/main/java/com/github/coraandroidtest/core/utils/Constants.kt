@@ -34,7 +34,8 @@ object EditTextCora {
     const val FIELD_TYPE_NONE = 0
     const val FIELD_TYPE_CPF = 1
     const val FIELD_TYPE_NAME = 2
-    const val FIELD_TYPE_NUMBER = 3
+    const val FIELD_TYPE_AGENCY = 3
+    const val FIELD_TYPE_ACCOUNT = 4
     const val MAX_LENGTH_DEFAULT = 30
     const val MAX_LENGTH_CPF = MASK_CPF.length
     const val MAX_LENGTH_NAME = 30

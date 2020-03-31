@@ -14,7 +14,8 @@
             <enum name="none" value="0" />
             <enum name="cpf" value="1" />
             <enum name="name" value="2" />
-            <enum name="number" value="3" />
+            <enum name="agency" value="3" />
+            <enum name="account" value="4" />
         </attr>
         <attr name="maxLength" format="integer" />
         <attr name="placeholder" format="string" />

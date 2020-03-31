@@ -5,13 +5,15 @@ import android.text.InputType
 import android.text.method.DigitsKeyListener
 import br.com.concrete.canarinho.watcher.MascaraNumericaTextWatcher
 import com.github.coraandroidtest.R
+import com.github.coraandroidtest.core.utils.EditTextCora.FIELD_TYPE_ACCOUNT
 import com.github.coraandroidtest.core.utils.EditTextCora.FIELD_TYPE_CPF
 import com.github.coraandroidtest.core.utils.EditTextCora.FIELD_TYPE_NAME
 import com.github.coraandroidtest.core.utils.EditTextCora.FIELD_TYPE_NONE
-import com.github.coraandroidtest.core.utils.EditTextCora.FIELD_TYPE_NUMBER
+import com.github.coraandroidtest.core.utils.EditTextCora.FIELD_TYPE_AGENCY
 import com.github.coraandroidtest.core.utils.EditTextCora.MAX_LENGTH_CPF
 import com.github.coraandroidtest.core.utils.EditTextCora.MAX_LENGTH_DEFAULT
 import com.github.coraandroidtest.core.utils.EditTextCora.MAX_LENGTH_NAME
+import com.github.coraandroidtest.core.utils.EditTextCora.PLACEHOLDER_ACCOUNT
 import com.github.coraandroidtest.core.utils.EditTextCora.PLACEHOLDER_AGENCY
 import com.github.coraandroidtest.core.utils.EditTextCora.PLACEHOLDER_CPF
 import com.github.coraandroidtest.core.utils.EditTextCora.PLACEHOLDER_NAME
@@ -27,7 +29,7 @@ fun EditTextCora.allowedDigits(): String {
     return when (fieldType) {
         FIELD_TYPE_NAME -> context.getString(ALLOWED_DIGITS_NAME)
         FIELD_TYPE_CPF -> context.getString(ALLOWED_DIGITS_CPF)
-        FIELD_TYPE_NUMBER -> context.getString(ALLOWED_DIGITS_NUMBER)
+        FIELD_TYPE_AGENCY, FIELD_TYPE_ACCOUNT -> context.getString(ALLOWED_DIGITS_NUMBER)
         else -> context.getString(ALLOWED_DIGITS_OTHER)
     }
 }
@@ -44,7 +46,7 @@ fun EditTextCora.inputType(): Int {
         FIELD_TYPE_NONE -> {
             InputType.TYPE_CLASS_TEXT
         }
-        FIELD_TYPE_CPF, FIELD_TYPE_NUMBER -> {
+        FIELD_TYPE_CPF, FIELD_TYPE_AGENCY, FIELD_TYPE_ACCOUNT -> {
             InputType.TYPE_CLASS_NUMBER
         }
         FIELD_TYPE_NAME -> {
@@ -97,7 +99,8 @@ private fun EditTextCora.getPlaceholder(): String? {
     return placeholder ?: when (fieldType) {
         FIELD_TYPE_NAME -> PLACEHOLDER_NAME
         FIELD_TYPE_CPF -> PLACEHOLDER_CPF
-        FIELD_TYPE_NUMBER -> PLACEHOLDER_AGENCY
+        FIELD_TYPE_AGENCY -> PLACEHOLDER_AGENCY
+        FIELD_TYPE_ACCOUNT -> PLACEHOLDER_ACCOUNT
         else -> null
     }
 }
