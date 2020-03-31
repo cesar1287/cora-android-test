@@ -54,6 +54,7 @@
         <item name="android:paddingEnd">@dimen/largeMargin</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">@dimen/text_14_sp</item>
+        <item name="android:text">@string/button_next</item>
     </style>
 
     <style name="ButtomCoraNext.Enabled">

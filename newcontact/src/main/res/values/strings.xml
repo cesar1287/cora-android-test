@@ -1,10 +1,6 @@
 <resources>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment CPF</string>
     <string name="title_fragment_cpf">Qual o CPF do seu novo contato?</string>
     <string name="title_fragment_name">Qual o nome completo?</string>
-    <string name="title_fragment_agency">Qual o nome completo?</string>
-    <string name="button_next">Próximo</string>
-
+    <string name="title_fragment_agency">Digite o número da agência sem o dígito</string>
+    <string name="title_fragment_account">Informe o número da conta com o dígito</string>
 </resources>

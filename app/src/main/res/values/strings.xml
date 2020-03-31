@@ -2,4 +2,6 @@
     <string name="app_name">Cora Android Test</string>
     <string name="title_home">Home</string>
     <string name="title_newcontact">Module Title</string>
+
+    <string name="button_next">Próximo</string>
 </resources>
