@@ -1,38 +1,13 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>
-
-    <style name="RecyclerViewTitle">
-        <item name="android:textColor">@color/dark_pink</item>
-        <item name="android:textSize">@dimen/default_name_size</item>
-        <item name="android:layout_marginStart">@dimen/largeMargin</item>
-        <item name="android:layout_marginTop">@dimen/xdefaultMargin</item>
-    </style>
-
-    <style name="RecyclerViewSubtitle">
+    <style name="TitleNewContact">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/default_title_new_contact_size</item>
         <item name="android:textColor">@color/light_black</item>
-        <item name="android:textSize">@dimen/default_cpf_size</item>
         <item name="android:layout_marginStart">@dimen/largeMargin</item>
-        <item name="android:layout_marginTop">@dimen/xminimumMargin</item>
-        <item name="android:layout_marginBottom">@dimen/xdefaultMargin</item>
-    </style>
-
-    <style name="ToolbarItauView">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:minHeight">?attr/actionBarSize</item>
-    </style>
-
-    <style name="ToolbarTrackingProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">@dimen/height_toolbar_tracking</item>
-        <item name="android:progressDrawable">@drawable/progress_toolbaritau_tracking</item>
+        <item name="android:layout_marginEnd">@dimen/largeMargin</item>
+        <item name="android:layout_marginTop">@dimen/xlargeMargin</item>
     </style>
 
 </resources>

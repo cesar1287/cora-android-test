@@ -44,4 +44,25 @@
         <item name="android:textColorHint">@color/dark_gray</item>
     </style>
 
+    <style name="ButtomCoraNext">
+        <item name="android:drawableEnd">@drawable/ic_arrow_forward_white</item>
+        <item name="android:layout_marginStart">@dimen/largeMargin</item>
+        <item name="android:layout_marginEnd">@dimen/largeMargin</item>
+        <item name="android:layout_marginBottom">@dimen/defaultMargin</item>
+        <item name="android:textAlignment">textStart</item>
+        <item name="android:paddingStart">@dimen/largeMargin</item>
+        <item name="android:paddingEnd">@dimen/largeMargin</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/text_14_sp</item>
+    </style>
+
+    <style name="ButtomCoraNext.Enabled">
+        <item name="android:background">@drawable/button_border_enabled</item>
+    </style>
+
+    <style name="ButtomCoraNext.Disabled">
+        <item name="android:background">@drawable/button_border_disabled</item>
+        <item name="android:enabled">true</item>
+    </style>
+
 </resources>
