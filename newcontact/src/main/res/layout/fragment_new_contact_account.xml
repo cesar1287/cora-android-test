@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:toolbarType="new_contact"
-        app:progressToolbarCora="80"
+        app:progressToolbarCora="64"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
@@ -20,9 +20,34 @@
         android:id="@+id/tvNewContactAccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/light_black"
-        android:text="Digite o número da agência sem o dígito"
-        app:layout_constraintTop_toBottomOf="@+id/tbNewContactToolbar"
+        style="@style/TitleNewContact"
+        android:text="@string/title_fragment_account"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tbNewContactToolbar"/>
+
+    <com.github.coraandroidtest.customview.EditTextCora
+        android:id="@+id/etNewContactAccount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:fieldType="account"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginEnd="@dimen/largeMargin"
+        android:layout_marginTop="@dimen/xlargeMargin"
+        app:layout_constraintTop_toBottomOf="@+id/tvNewContactAccount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/acbNewContactAccountNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/ButtomCoraNext.Disabled"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginEnd="@dimen/largeMargin"
+        android:layout_marginBottom="@dimen/defaultMargin"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 

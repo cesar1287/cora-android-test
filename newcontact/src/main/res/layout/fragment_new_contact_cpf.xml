@@ -43,7 +43,6 @@
         android:id="@+id/acbNewContactCpfNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/button_next"
         style="@style/ButtomCoraNext.Disabled"
         app:layout_constraintVertical_bias="1.0"
         app:layout_constraintBottom_toBottomOf="parent"
