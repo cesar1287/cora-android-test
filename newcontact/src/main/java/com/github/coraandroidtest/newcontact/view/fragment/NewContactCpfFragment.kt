@@ -12,14 +12,13 @@ import com.github.coraandroidtest.core.utils.Mask
 import com.github.coraandroidtest.core.utils.NewContact.HASH_MAP_CPF
 
 import com.github.coraandroidtest.newcontact.R
+import com.github.coraandroidtest.newcontact.base.BaseNewContactFragment
 import com.github.coraandroidtest.newcontact.viewmodel.NewContactViewModel
 import com.github.coraandroidtest.R as APP
 import kotlinx.android.synthetic.main.fragment_new_contact_cpf.*
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-class NewContactCpfFragment : Fragment() {
-
-    private val viewModel: NewContactViewModel by sharedViewModel()
+class NewContactCpfFragment : BaseNewContactFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
