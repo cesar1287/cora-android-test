@@ -5,17 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".view.HomeActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <com.github.coraandroidtest.customview.ToolbarCora
+            android:id="@+id/tbHomeMainToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:toolbarType="contacts"
+            app:titleToolbarCora="@string/title_home_my_contacts"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btHomeNewContact"/>
+
         <Button
             android:id="@+id/btHomeNewContact"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tbHomeMainToolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/rvHomeContactsList"/>
