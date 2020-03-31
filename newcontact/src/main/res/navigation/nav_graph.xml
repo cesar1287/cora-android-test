@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newContactCpfFragment">
+
+    <fragment
+        android:id="@+id/newContactCpfFragment"
+        android:name="com.github.coraandroidtest.newcontact.view.fragment.NewContactCpfFragment"
+        android:label="fragment_new_contact_cpf"
+        tools:layout="@layout/fragment_new_contact_cpf" >
+        <action
+            android:id="@+id/action_newContactCpfFragment_to_newContactNameFragment"
+            app:destination="@id/newContactNameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newContactNameFragment"
+        android:name="com.github.coraandroidtest.newcontact.view.fragment.NewContactNameFragment"
+        android:label="fragment_new_contact_name"
+        tools:layout="@layout/fragment_new_contact_name" >
+        <action
+            android:id="@+id/action_newContactNameFragment_to_newContactBankFragment"
+            app:destination="@id/newContactBankFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newContactBankFragment"
+        android:name="com.github.coraandroidtest.newcontact.view.fragment.NewContactBankFragment"
+        android:label="fragment_new_contact_bank"
+        tools:layout="@layout/fragment_new_contact_bank" >
+        <action
+            android:id="@+id/action_newContactBankFragment_to_newContactAgencyFragment"
+            app:destination="@id/newContactAgencyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newContactAgencyFragment"
+        android:name="com.github.coraandroidtest.newcontact.view.fragment.NewContactAgencyFragment"
+        android:label="fragment_new_contact_agency"
+        tools:layout="@layout/fragment_new_contact_agency" >
+        <action
+            android:id="@+id/action_newContactAgencyFragment_to_newContactAccountFragment"
+            app:destination="@id/newContactAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newContactAccountFragment"
+        android:name="com.github.coraandroidtest.newcontact.view.fragment.NewContactAccountFragment"
+        android:label="fragment_new_contact_account"
+        tools:layout="@layout/fragment_new_contact_account" />
+</navigation>
