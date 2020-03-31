@@ -45,3 +45,11 @@ object EditTextCora {
     const val PLACEHOLDER_AGENCY = "0000"
     const val PLACEHOLDER_ACCOUNT = "000000-0"
 }
+
+object NewContact {
+    const val HASH_MAP_CPF = "cpf"
+    const val HASH_MAP_NAME = "name"
+    const val HASH_MAP_BANK = "bank"
+    const val HASH_MAP_AGENCY = "agency"
+    const val HASH_MAP_ACCOUNT = "account"
+}
