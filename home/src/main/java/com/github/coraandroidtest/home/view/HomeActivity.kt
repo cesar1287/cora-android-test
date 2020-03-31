@@ -1,6 +1,7 @@
 package com.github.coraandroidtest.home.view
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -38,6 +39,13 @@ class HomeActivity : AppCompatActivity() {
                 setupRecyclerView(this, contactsList)
             }
         })
+
+        btHomeNewContact.setOnClickListener {
+            startActivity(Intent(
+                this,
+                Class.forName("com.github.coraandroidtest.newcontact.view.activity.NewContactActivity")
+            ))
+        }
     }
 
     private fun setupRecyclerView(context: Context, contactsList: List<Contact>) {
