@@ -46,7 +46,7 @@ class NewContactAgencyFragment : BaseNewContactFragment() {
         acbNewContactAgencyNext.setOnClickListener {
             val cpf = etNewContactAgency.editText?.text.toString()
             viewModel.saveNewContactPartially(HASH_MAP_AGENCY, cpf)
-            val action = NewContactCpfFragmentDirections.actionNewContactCpfFragmentToNewContactNameFragment()
+            val action = NewContactAgencyFragmentDirections.actionNewContactAgencyFragmentToNewContactAccountFragment()
             view?.findNavController()?.navigate(action)
         }
     }

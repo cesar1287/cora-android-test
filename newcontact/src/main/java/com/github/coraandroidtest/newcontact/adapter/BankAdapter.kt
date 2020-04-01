@@ -1,35 +1,44 @@
-package com.github.coraandroidtest.home.adapter
+package com.github.coraandroidtest.newcontact.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.github.coraandroidtest.core.database.entity.Contact
-import com.github.coraandroidtest.home.R
-import kotlinx.android.synthetic.main.item_contact.view.*
+import com.github.coraandroidtest.core.database.entity.Bank
+import com.github.coraandroidtest.newcontact.R
+import com.github.coraandroidtest.newcontact.listener.BankListener
+import kotlinx.android.synthetic.main.item_bank.view.*
 
-class HomeAdapter (
-    private val contactsList: List<Contact>
-) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+class BankAdapter (
+    private val banksList: List<Bank>,
+    private val bankListener: BankListener
+) : RecyclerView.Adapter<BankAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_contact, parent, false)
-        return ViewHolder(view)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_bank, parent, false)
+        return ViewHolder(view, bankListener)
     }
 
     override fun getItemCount(): Int {
-        return contactsList.size
+        return banksList.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(contactsList[position])
+        holder.bind(banksList[position])
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class ViewHolder(
+        itemView: View,
+        private val bankListener: BankListener
+    ) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(contact: Contact) = with(itemView) {
-            tvContactName.text = contact.contactName
-            tvContactCpf.text = contact.contactCpf
+        fun bind(bank: Bank) = with(itemView) {
+            tvBankName.text = bank.bankName
+            tvBankCode.text = bank.bankCode.toString()
+
+            contentLayout.setOnClickListener {
+                bankListener.onBankSelected(bank.bankCode)
+            }
         }
     }
 }
