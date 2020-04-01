@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.navigation.findNavController
 import com.github.coraandroidtest.core.utils.NewContact.HASH_MAP_NAME
+import com.github.coraandroidtest.extensions.hideKeyboard
 import com.github.coraandroidtest.extensions.setButtonEnabled
 import com.github.coraandroidtest.extensions.setViewBackgroundDisabled
 import com.github.coraandroidtest.extensions.setViewBackgroundEnabled
@@ -43,6 +44,7 @@ class NewContactNameFragment : BaseNewContactFragment() {
         }
 
         acbNewContactNameNext.setOnClickListener {
+            requireActivity().hideKeyboard(it)
             val name = etNewContactName.editText?.text.toString()
             viewModel.saveNewContactPartially(HASH_MAP_NAME, name)
             val action = NewContactNameFragmentDirections.actionNewContactNameFragmentToNewContactBankFragment()
