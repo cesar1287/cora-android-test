@@ -1,7 +1,6 @@
 package com.github.coraandroidtest.newcontact.view.fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -49,6 +48,7 @@ class NewContactAccountFragment : BaseNewContactFragment() {
             requireActivity().hideKeyboard(it)
             val cpf = etNewContactAccount.editText?.text.toString()
             viewModel.saveNewContactPartially(HASH_MAP_ACCOUNT, cpf)
+            viewModel.saveNewContactDatabase()
             val action = NewContactAccountFragmentDirections.actionNewContactAccountFragmentToNewContactSuccessFragment()
             view?.findNavController()?.navigate(action)
         }

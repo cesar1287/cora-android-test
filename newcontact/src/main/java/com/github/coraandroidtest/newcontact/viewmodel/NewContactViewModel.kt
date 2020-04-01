@@ -15,6 +15,7 @@ class NewContactViewModel(application: Application) : BaseViewModel(application)
     private val business: NewContactBusiness by inject()
 
     private val bankDao = CoraDatabase.getDatabase(application).bankDao()
+    private val contactDao = CoraDatabase.getDatabase(application).contactDao()
 
     val bankLiveData: MutableLiveData<List<Bank>> = MutableLiveData()
 
@@ -25,6 +26,12 @@ class NewContactViewModel(application: Application) : BaseViewModel(application)
     fun getAllBanks() {
         viewModelScope.launch {
             bankLiveData.postValue(business.getAllBanks(bankDao))
+        }
+    }
+
+    fun saveNewContactDatabase() {
+        viewModelScope.launch {
+            business.saveNewContactDatabase(contactDao)
         }
     }
 }

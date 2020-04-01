@@ -25,6 +25,10 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         HomeDependencyInjection.injectModules()
+    }
+
+    override fun onResume() {
+        super.onResume()
 
         viewModel.getAllContacts()
         setupObservables()
@@ -36,6 +40,8 @@ class HomeActivity : AppCompatActivity() {
                 ivHomeNoContacts.visibility = View.VISIBLE
                 rvHomeContactsList.visibility = View.GONE
             } else {
+                ivHomeNoContacts.visibility = View.GONE
+                rvHomeContactsList.visibility = View.VISIBLE
                 setupRecyclerView(this, contactsList)
             }
         })

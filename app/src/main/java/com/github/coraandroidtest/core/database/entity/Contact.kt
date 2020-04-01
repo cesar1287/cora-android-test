@@ -12,6 +12,7 @@ data class Contact(
     @PrimaryKey(autoGenerate = true) val uid: Int = 0,
     @ColumnInfo(name = "contact_name") val contactName: String?,
     @ColumnInfo(name = "contact_cpf") val contactCpf: String?,
+    @ColumnInfo(name = "contact_bank_code") val contactBankCode: Int?,
     @ColumnInfo(name = "contact_agency") val contactAgency: String?,
     @ColumnInfo(name = "contact_account") val contactAccount: String?
 ) : Parcelable

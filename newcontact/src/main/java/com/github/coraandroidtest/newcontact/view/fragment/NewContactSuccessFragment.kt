@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 
 import com.github.coraandroidtest.newcontact.R
 import kotlinx.android.synthetic.main.fragment_new_contact_success.*
