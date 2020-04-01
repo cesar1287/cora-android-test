@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.item_contact.view.*
 
 class HomeAdapter(
     private val contactsList: List<Contact>,
-    private val idLastInserted: Int
+    private val idLastInserted: Int?
 ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -30,7 +30,7 @@ class HomeAdapter(
 
         fun bind(
             contact: Contact,
-            idLastInserted: Int
+            idLastInserted: Int?
         ) = with(itemView) {
             tvContactName.text = contact.contactName
             tvContactCpf.text = contact.contactCpf

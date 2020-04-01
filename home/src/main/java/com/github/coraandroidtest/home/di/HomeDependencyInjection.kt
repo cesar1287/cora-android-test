@@ -4,7 +4,7 @@ import org.koin.core.context.loadKoinModules
 
 object HomeDependencyInjection {
     private val loadHomeModules by lazy {
-        loadKoinModules(listOf(businessModule, repositoryModule, viewModelModule))
+        loadKoinModules(listOf(parameters, businessModule, repositoryModule, viewModelModule))
     }
 
     fun injectModules() = loadHomeModules

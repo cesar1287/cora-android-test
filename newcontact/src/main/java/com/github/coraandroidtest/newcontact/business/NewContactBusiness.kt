@@ -22,11 +22,11 @@ class NewContactBusiness: BaseBusiness() {
         CoraHelper.insertFieldNewContact(hashMapField, field)
     }
 
-    suspend fun getAllBanks(bankDao: BankDao): List<Bank>? {
-        return repository.getAllBanks(bankDao)
+    suspend fun getAllBanks(): List<Bank>? {
+        return repository.getAllBanks()
     }
 
-    suspend fun saveNewContactDatabase(contactDao: ContactDao) {
+    suspend fun saveNewContactDatabase() {
         val getContact = CoraHelper.getUserSavedPartially()
         val contact = Contact(
             contactName = getContact[HASH_MAP_NAME] as? String,
@@ -36,11 +36,11 @@ class NewContactBusiness: BaseBusiness() {
             contactAccount = getContact[HASH_MAP_ACCOUNT] as? String
         )
 
-        repository.saveNewContact(contactDao, contact)
+        repository.saveNewContact(contact)
     }
 
-    suspend fun getAllMainBanks(bankDao: BankDao): List<Bank>? {
-        return repository.getAllMainBanks(bankDao)
+    suspend fun getAllMainBanks(): List<Bank>? {
+        return repository.getAllMainBanks()
     }
 
 }

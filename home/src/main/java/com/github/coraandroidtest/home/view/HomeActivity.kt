@@ -55,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupRecyclerView(context: Context, pair: Pair<List<Contact>, Int>) {
+    private fun setupRecyclerView(context: Context, pair: Pair<List<Contact>, Int?>) {
         val contactsList = pair.first
         val idLastInserted = pair.second
 

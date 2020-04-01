@@ -14,9 +14,6 @@ class NewContactViewModel(application: Application) : BaseViewModel(application)
 
     private val business: NewContactBusiness by inject()
 
-    private val bankDao = CoraDatabase.getDatabase(application).bankDao()
-    private val contactDao = CoraDatabase.getDatabase(application).contactDao()
-
     val bankLiveData: MutableLiveData<List<Bank>> = MutableLiveData()
     val mainBankLiveData: MutableLiveData<List<Bank>> = MutableLiveData()
 
@@ -26,19 +23,19 @@ class NewContactViewModel(application: Application) : BaseViewModel(application)
 
     fun getAllBanks() {
         viewModelScope.launch {
-            bankLiveData.postValue(business.getAllBanks(bankDao))
+            bankLiveData.postValue(business.getAllBanks())
         }
     }
 
     fun saveNewContactDatabase() {
         viewModelScope.launch {
-            business.saveNewContactDatabase(contactDao)
+            business.saveNewContactDatabase()
         }
     }
 
     fun getAllMainBanks() {
         viewModelScope.launch {
-            mainBankLiveData.postValue(business.getAllMainBanks(bankDao))
+            mainBankLiveData.postValue(business.getAllMainBanks())
         }
     }
 }
