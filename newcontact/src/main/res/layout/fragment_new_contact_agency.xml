@@ -21,6 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TitleNewContact"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constrainedWidth="true"
         android:text="@string/title_fragment_agency"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
