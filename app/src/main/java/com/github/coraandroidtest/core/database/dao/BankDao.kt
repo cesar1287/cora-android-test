@@ -11,4 +11,7 @@ interface BankDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAllData(banksList: List<Bank>)
+
+    @Query("SELECT * FROM banks where bank_main == 1")
+    suspend fun getAllMainBanks(): List<Bank>
 }

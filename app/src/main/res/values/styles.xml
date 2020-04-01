@@ -43,4 +43,13 @@
         <item name="android:textColor">@color/light_black</item>
         <item name="android:textColorHint">@color/dark_gray</item>
     </style>
+
+    <style name="TextViewNewContactLabel">
+        <item name="android:textSize">@dimen/text_12_sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:paddingTop">@dimen/minimumMargin</item>
+        <item name="android:paddingBottom">@dimen/minimumMargin</item>
+        <item name="android:paddingStart">@dimen/largeMargin</item>
+        <item name="android:paddingEnd">@dimen/largeMargin</item>
+    </style>
 </resources>

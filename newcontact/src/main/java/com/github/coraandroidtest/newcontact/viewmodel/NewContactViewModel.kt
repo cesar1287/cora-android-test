@@ -18,6 +18,7 @@ class NewContactViewModel(application: Application) : BaseViewModel(application)
     private val contactDao = CoraDatabase.getDatabase(application).contactDao()
 
     val bankLiveData: MutableLiveData<List<Bank>> = MutableLiveData()
+    val mainBankLiveData: MutableLiveData<List<Bank>> = MutableLiveData()
 
     fun saveNewContactPartially(hashMapField: String, field: Any?) {
         business.saveNewContactPartially(hashMapField, field)
@@ -32,6 +33,12 @@ class NewContactViewModel(application: Application) : BaseViewModel(application)
     fun saveNewContactDatabase() {
         viewModelScope.launch {
             business.saveNewContactDatabase(contactDao)
+        }
+    }
+
+    fun getAllMainBanks() {
+        viewModelScope.launch {
+            mainBankLiveData.postValue(business.getAllMainBanks(bankDao))
         }
     }
 }

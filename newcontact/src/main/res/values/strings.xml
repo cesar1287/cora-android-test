@@ -7,4 +7,6 @@
     <string name="new_contact_success">Novo contato cadastrado!</string>
     <string name="subtitle_new_contact_success">Esse contato aparecerá na sua lista ao fazer uma transferência ou emitir um boleto.</string>
     <string name="new_contact_register">Concluir cadastro</string>
+    <string name="label_main_banks">Principais bancos</string>
+    <string name="label_all_banks">Todos os bancos</string>
 </resources>

@@ -1,29 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragment.NewContactBankFragment">
 
-    <com.github.coraandroidtest.customview.ToolbarCora
-        android:id="@+id/tbNewContactToolbar"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:toolbarType="new_contact"
-        app:progressToolbarCora="51"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:layout_height="match_parent">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvHomeBanksList"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/tbNewContactToolbar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="@dimen/defaultMargin"
-        tools:listitem="@layout/item_bank"/>
+        <com.github.coraandroidtest.customview.ToolbarCora
+            android:id="@+id/tbNewContactToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:toolbarType="new_contact"
+            app:progressToolbarCora="51"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vgNewContactLabelMainBanks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_white"
+            android:layout_marginTop="@dimen/defaultMargin"
+            app:layout_constraintTop_toBottomOf="@+id/tbNewContactToolbar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rvHomeMainBanksList">
+
+            <TextView
+                android:text="@string/label_main_banks"
+                style="@style/TextViewNewContactLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHomeMainBanksList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/vgNewContactLabelMainBanks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/defaultMargin"
+            tools:listitem="@layout/item_bank"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vgNewContactLabelAllBanks"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_white"
+            android:layout_marginTop="@dimen/defaultMargin"
+            app:layout_constraintTop_toBottomOf="@+id/rvHomeMainBanksList"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rvHomeBanksList">
+
+            <TextView
+                android:text="@string/label_all_banks"
+                style="@style/TextViewNewContactLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHomeBanksList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/vgNewContactLabelAllBanks"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="@dimen/defaultMargin"
+            tools:listitem="@layout/item_bank"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

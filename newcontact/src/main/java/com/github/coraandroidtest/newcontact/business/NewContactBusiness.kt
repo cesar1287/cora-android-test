@@ -39,4 +39,8 @@ class NewContactBusiness: BaseBusiness() {
         repository.saveNewContact(contactDao, contact)
     }
 
+    suspend fun getAllMainBanks(bankDao: BankDao): List<Bank>? {
+        return repository.getAllMainBanks(bankDao)
+    }
+
 }

@@ -33,6 +33,7 @@ class NewContactBankFragment : BaseNewContactFragment(), BankListener {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.getAllBanks()
+        viewModel.getAllMainBanks()
         setupObservables()
         tbNewContactToolbar.listener = this
     }
@@ -41,6 +42,17 @@ class NewContactBankFragment : BaseNewContactFragment(), BankListener {
         viewModel.bankLiveData.observe(this, Observer {
             setupRecyclerView(requireContext(), it)
         })
+
+        viewModel.mainBankLiveData.observe(this, Observer {
+            setupRecyclerViewMainBanks(requireContext(), it)
+        })
+    }
+
+    private fun setupRecyclerViewMainBanks(context: Context, banksList: List<Bank>) {
+        val layoutManager = LinearLayoutManager(context)
+        rvHomeMainBanksList.layoutManager = layoutManager
+        bankAdapter = BankAdapter(banksList, this)
+        rvHomeMainBanksList.adapter = bankAdapter
     }
 
     private fun setupRecyclerView(context: Context, banksList: List<Bank>) {

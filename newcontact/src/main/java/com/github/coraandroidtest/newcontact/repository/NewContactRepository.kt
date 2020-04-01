@@ -21,4 +21,10 @@ class NewContactRepository : BaseRepository() {
         contactDao.insert(contact)
     }
 
+    suspend fun getAllMainBanks(
+        bankDao: BankDao
+    ): List<Bank>? {
+        return bankDao.getAllMainBanks()
+    }
+
 }
