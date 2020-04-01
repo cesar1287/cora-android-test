@@ -31,7 +31,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupObservables() {
-        viewModel.bankLiveData.observe(this, Observer { contactsList ->
+        viewModel.contactLiveData.observe(this, Observer { contactsList ->
             if (contactsList.isEmpty()) {
                 ivHomeNoContacts.visibility = View.VISIBLE
                 rvHomeContactsList.visibility = View.GONE
