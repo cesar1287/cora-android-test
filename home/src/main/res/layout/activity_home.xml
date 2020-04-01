@@ -10,7 +10,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/white">
 
         <com.github.coraandroidtest.customview.ToolbarCora
             android:id="@+id/tbHomeMainToolbar"
@@ -27,16 +28,39 @@
             android:id="@+id/btHomeNewContact"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            style="@style/ButtonCoraNewContact"
+            android:layout_marginTop="@dimen/defaultMargin"
+            android:layout_marginBottom="@dimen/defaultMargin"
             app:layout_constraintTop_toBottomOf="@+id/tbHomeMainToolbar"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/rvHomeContactsList"/>
+            app:layout_constraintBottom_toTopOf="@+id/vgNewContactLabel"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/vgNewContactLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_white"
+            app:layout_constraintTop_toBottomOf="@+id/btHomeNewContact"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/rvHomeContactsList">
+
+            <TextView
+                android:text="@string/home_account_registered"
+                style="@style/TextViewNewContactLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvHomeContactsList"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/btHomeNewContact"
+            app:layout_constraintTop_toBottomOf="@id/vgNewContactLabel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="@dimen/defaultMargin"

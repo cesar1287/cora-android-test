@@ -44,7 +44,7 @@
         android:id="@+id/acbNewContactAccountNext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/ButtomCoraSuccess.Disabled"
+        style="@style/ButtonCoraSuccess.Disabled"
         android:text="@string/new_contact_register"
         android:layout_marginStart="@dimen/largeMargin"
         android:layout_marginEnd="@dimen/largeMargin"

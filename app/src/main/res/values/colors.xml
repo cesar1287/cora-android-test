@@ -9,6 +9,7 @@
     <color name="gray">#F0F4F8</color>
     <color name="dark_gray">#888E93</color>
     <color name="white">#FFFFFF</color>
+    <color name="dark_white">#F0F4F8</color>
 
     <color name="progress_toolbar_tracking_empty">#DEE4E9</color>
     <color name="progress_toolbar_tracking_filled">#1EA4F3</color>

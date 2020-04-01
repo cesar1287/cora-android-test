@@ -44,7 +44,7 @@
         <item name="android:textColorHint">@color/dark_gray</item>
     </style>
 
-    <style name="ButtomCoraNext">
+    <style name="ButtonCoraNext" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:drawableEnd">@drawable/ic_arrow_forward_white</item>
         <item name="android:layout_marginStart">@dimen/largeMargin</item>
         <item name="android:layout_marginEnd">@dimen/largeMargin</item>
@@ -58,15 +58,15 @@
         <item name="android:textAllCaps">false</item>
     </style>
 
-    <style name="ButtomCoraNext.Enabled">
+    <style name="ButtonCoraNext.Enabled">
         <item name="android:background">@drawable/button_border_enabled</item>
     </style>
 
-    <style name="ButtomCoraNext.Disabled">
+    <style name="ButtonCoraNext.Disabled">
         <item name="android:background">@drawable/button_border_disabled</item>
     </style>
 
-    <style name="ButtomCoraSuccess">
+    <style name="ButtonCoraSuccess" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:layout_marginStart">@dimen/largeMargin</item>
         <item name="android:layout_marginEnd">@dimen/largeMargin</item>
         <item name="android:layout_marginBottom">@dimen/defaultMargin</item>
@@ -77,11 +77,20 @@
         <item name="android:text">@string/button_success</item>
     </style>
 
-    <style name="ButtomCoraSuccess.Enabled">
+    <style name="ButtonCoraSuccess.Enabled">
         <item name="android:background">@drawable/button_border_enabled</item>
     </style>
 
-    <style name="ButtomCoraSuccess.Disabled">
+    <style name="ButtonCoraSuccess.Disabled">
         <item name="android:background">@drawable/button_border_disabled</item>
+    </style>
+
+    <style name="TextViewNewContactLabel">
+        <item name="android:textSize">@dimen/text_12_sp</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:paddingTop">@dimen/xminimumMargin</item>
+        <item name="android:paddingBottom">@dimen/xminimumMargin</item>
+        <item name="android:paddingStart">@dimen/largeMargin</item>
+        <item name="android:paddingEnd">@dimen/largeMargin</item>
     </style>
 </resources>
