@@ -23,7 +23,7 @@ class ToolbarCora @JvmOverloads constructor(
 
     private var toolbarProgress: Int? = null
 
-    var listener: ToolBarItauListener? = null
+    var listener: ToolbarCoraListener? = null
 
     var backButton: ImageView? = null
 
@@ -118,7 +118,7 @@ class ToolbarCora @JvmOverloads constructor(
         }
     }
 
-    interface ToolBarItauListener {
+    interface ToolbarCoraListener {
         fun onBackPressedToolbar()
     }
 }

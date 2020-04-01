@@ -6,7 +6,7 @@ import com.github.coraandroidtest.newcontact.view.fragment.NewContactSuccessFrag
 import com.github.coraandroidtest.newcontact.viewmodel.NewContactViewModel
 import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
-open class BaseNewContactFragment : Fragment(), ToolbarCora.ToolBarItauListener {
+open class BaseNewContactFragment : Fragment(), ToolbarCora.ToolbarCoraListener {
 
     val viewModel: NewContactViewModel by sharedViewModel()
 
