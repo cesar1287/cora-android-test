@@ -17,6 +17,8 @@ import com.github.coraandroidtest.core.utils.EditTextCora.PLACEHOLDER_ACCOUNT
 import com.github.coraandroidtest.core.utils.EditTextCora.PLACEHOLDER_AGENCY
 import com.github.coraandroidtest.core.utils.EditTextCora.PLACEHOLDER_CPF
 import com.github.coraandroidtest.core.utils.EditTextCora.PLACEHOLDER_NAME
+import com.github.coraandroidtest.core.utils.Mask.MASK_ACCOUNT
+import com.github.coraandroidtest.core.utils.Mask.MASK_AGENCY
 import com.github.coraandroidtest.core.utils.Mask.MASK_CPF
 import com.github.coraandroidtest.customview.EditTextCora
 
@@ -78,6 +80,8 @@ fun EditTextCora.setMaxLength() {
 fun EditTextCora.mask(): String {
     return when (fieldType) {
         FIELD_TYPE_CPF -> MASK_CPF
+        FIELD_TYPE_AGENCY -> MASK_AGENCY
+        FIELD_TYPE_ACCOUNT -> MASK_ACCOUNT
         else -> ""
     }
 }
