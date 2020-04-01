@@ -7,7 +7,7 @@ import com.github.coraandroidtest.core.database.entity.Contact
 @Dao
 interface ContactDao {
 
-    @Query("SELECT * FROM contacts")
+    @Query("SELECT * FROM contacts ORDER BY contact_name ASC")
     suspend fun getAllContacts(): List<Contact>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
