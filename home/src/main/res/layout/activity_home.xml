@@ -66,7 +66,7 @@
             android:layout_marginTop="@dimen/defaultMargin"
             tools:listitem="@layout/item_contact"/>
 
-        <ImageView
+        <TextView
             android:id="@+id/ivHomeNoContacts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -74,7 +74,10 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:src="@mipmap/ic_launcher"
-            android:visibility="gone"/>
+            android:text="@string/home_no_contact"
+            android:textSize="@dimen/default_name_size"
+            android:textColor="@color/light_black"
+            android:textStyle="bold"
+            android:visibility="visible"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

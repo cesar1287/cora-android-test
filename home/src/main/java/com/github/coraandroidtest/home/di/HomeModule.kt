@@ -17,7 +17,7 @@ val businessModule = module {
 }
 
 val repositoryModule = module {
-    single { HomeRepository() }
+    single { HomeRepository(get()) }
 }
 
 val viewModelModule = module {

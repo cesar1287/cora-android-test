@@ -5,4 +5,5 @@
 
     <string name="button_next">Próximo</string>
     <string name="button_success">Voltar para lista de contatos</string>
+    <string name="home_no_contact">Nenhum contato adicionado</string>
 </resources>

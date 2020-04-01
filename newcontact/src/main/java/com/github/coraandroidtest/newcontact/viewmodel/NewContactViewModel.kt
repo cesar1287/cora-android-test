@@ -4,7 +4,6 @@ import android.app.Application
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.github.coraandroidtest.base.BaseViewModel
-import com.github.coraandroidtest.core.database.CoraDatabase
 import com.github.coraandroidtest.core.database.entity.Bank
 import com.github.coraandroidtest.newcontact.business.NewContactBusiness
 import kotlinx.coroutines.launch
