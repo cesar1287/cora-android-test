@@ -8,8 +8,9 @@ import com.github.coraandroidtest.core.database.entity.Contact
 import com.github.coraandroidtest.home.R
 import kotlinx.android.synthetic.main.item_contact.view.*
 
-class HomeAdapter (
-    private val contactsList: List<Contact>
+class HomeAdapter(
+    private val contactsList: List<Contact>,
+    private val idLastInserted: Int
 ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -22,14 +23,21 @@ class HomeAdapter (
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(contactsList[position])
+        holder.bind(contactsList[position], idLastInserted)
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        fun bind(contact: Contact) = with(itemView) {
+        fun bind(
+            contact: Contact,
+            idLastInserted: Int
+        ) = with(itemView) {
             tvContactName.text = contact.contactName
             tvContactCpf.text = contact.contactCpf
+
+            if (contact.uid == idLastInserted) {
+                vwContactNewContact.visibility = View.VISIBLE
+            }
         }
     }
 }

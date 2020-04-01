@@ -9,4 +9,8 @@ class HomeRepository {
         return contactDao.getAllContacts()
     }
 
+    suspend fun getLastInserted(contactDao: ContactDao): Int {
+        return contactDao.getLastInserted()
+    }
+
 }

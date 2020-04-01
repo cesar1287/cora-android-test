@@ -16,7 +16,7 @@ class HomeViewModel(application: Application) : BaseViewModel(application) {
 
     private val contactDao = CoraDatabase.getDatabase(application).contactDao()
 
-    val contactLiveData: MutableLiveData<List<Contact>> = MutableLiveData()
+    val contactLiveData: MutableLiveData<Pair<List<Contact>, Int>> = MutableLiveData()
 
     fun getAllContacts() {
         viewModelScope.launch {

@@ -35,14 +35,15 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupObservables() {
-        viewModel.contactLiveData.observe(this, Observer { contactsList ->
+        viewModel.contactLiveData.observe(this, Observer { pair ->
+            val contactsList = pair.first
             if (contactsList.isEmpty()) {
                 ivHomeNoContacts.visibility = View.VISIBLE
                 rvHomeContactsList.visibility = View.GONE
             } else {
                 ivHomeNoContacts.visibility = View.GONE
                 rvHomeContactsList.visibility = View.VISIBLE
-                setupRecyclerView(this, contactsList)
+                setupRecyclerView(this, pair)
             }
         })
 
@@ -54,10 +55,12 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun setupRecyclerView(context: Context, contactsList: List<Contact>) {
+    private fun setupRecyclerView(context: Context, pair: Pair<List<Contact>, Int>) {
         val layoutManager = LinearLayoutManager(context)
         rvHomeContactsList.layoutManager = layoutManager
-        homeAdapter = HomeAdapter(contactsList)
+        val contactsList = pair.first
+        val idLastInserted = pair.second
+        homeAdapter = HomeAdapter(contactsList, idLastInserted)
         rvHomeContactsList.adapter = homeAdapter
     }
 }
