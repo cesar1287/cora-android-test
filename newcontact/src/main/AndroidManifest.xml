@@ -4,7 +4,7 @@
     package="com.github.coraandroidtest.newcontact">
 
     <dist:module
-        dist:instant="false"
+        dist:instant="true"
         dist:title="@string/title_newcontact">
         <dist:delivery>
             <dist:install-time />

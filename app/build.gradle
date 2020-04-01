@@ -62,13 +62,13 @@ dependencies {
     //support
     api "com.google.android.material:material:${versions.material}"
     api "androidx.constraintlayout:constraintlayout:${versions.constraintLayout}"
-    api 'androidx.legacy:legacy-support-v4:1.0.0'
+    api "androidx.legacy:legacy-support-v4:${versions.legacySupport}"
 
     //Dependency injection
     api "org.koin:koin-android:${versions.koin}"
     api "org.koin:koin-androidx-viewmodel:${versions.koin}"
 
-    api 'br.com.concrete:canarinho:2.0.1'
+    api "br.com.concrete:canarinho:${versions.canarinho}"
 
     //tests
     testImplementation 'junit:junit:4.12'

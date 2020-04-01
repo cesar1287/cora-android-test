@@ -56,10 +56,11 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun setupRecyclerView(context: Context, pair: Pair<List<Contact>, Int>) {
-        val layoutManager = LinearLayoutManager(context)
-        rvHomeContactsList.layoutManager = layoutManager
         val contactsList = pair.first
         val idLastInserted = pair.second
+
+        val layoutManager = LinearLayoutManager(context)
+        rvHomeContactsList.layoutManager = layoutManager
         homeAdapter = HomeAdapter(contactsList, idLastInserted)
         rvHomeContactsList.adapter = homeAdapter
     }

@@ -53,10 +53,6 @@ class ToolbarCora @JvmOverloads constructor(
         }
     }
 
-    /***
-     * Altera tipo da toolbar reinicializando todos os componentes da mesma
-     * @param type Tipo da toolbar
-     */
     private fun setToolbarType(type: Int) {
         if (!isInEditMode) {
             this.removeAllViews()

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Cora Android Test</string>
     <string name="title_home">Home</string>
-    <string name="title_newcontact">Module Title</string>
+    <string name="title_newcontact">Novo contato</string>
 
     <string name="button_next">Próximo</string>
     <string name="button_success">Voltar para lista de contatos</string>

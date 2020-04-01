@@ -1,7 +1,6 @@
 package com.github.coraandroidtest.core.database.dao
 
 import androidx.room.*
-import com.github.coraandroidtest.core.database.entity.Bank
 import com.github.coraandroidtest.core.database.entity.Contact
 
 @Dao

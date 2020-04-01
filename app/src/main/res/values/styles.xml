@@ -32,7 +32,7 @@
     <style name="ToolbarTrackingProgressBar" parent="@android:style/Widget.ProgressBar.Horizontal">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">@dimen/height_toolbar_tracking</item>
-        <item name="android:progressDrawable">@drawable/progress_toolbaritau_tracking</item>
+        <item name="android:progressDrawable">@drawable/progress_toolbarcora_tracking</item>
     </style>
 
     <style name="EditTextCora" parent="Base.Widget.AppCompat.EditText">
