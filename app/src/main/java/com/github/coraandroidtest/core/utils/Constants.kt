@@ -7,15 +7,15 @@ import com.github.coraandroidtest.core.utils.Mask.MASK_CPF
 
 object Database {
     val PREPOPULATE_DATA = listOf(
-        Bank(bankName = "Itau", bankCode = 302, bankMain = true),
+        Bank(bankName = "Itau", bankCode = 301, bankMain = true),
         Bank(bankName = "Banco do Brasil", bankCode = 302, bankMain = true),
-        Bank(bankName = "Bradesco", bankCode = 302, bankMain = true),
-        Bank(bankName = "Santander", bankCode = 302, bankMain = true),
-        Bank(bankName = "Safra", bankCode = 302, bankMain = true),
-        Bank(bankName = "Banco BMG", bankCode = 302),
-        Bank(bankName = "Caixa", bankCode = 302),
-        Bank(bankName = "C6 Bank", bankCode = 302),
-        Bank(bankName = "Nu Pagamentos", bankCode = 302)
+        Bank(bankName = "Bradesco", bankCode = 303, bankMain = true),
+        Bank(bankName = "Santander", bankCode = 304, bankMain = true),
+        Bank(bankName = "Safra", bankCode = 305, bankMain = true),
+        Bank(bankName = "Banco BMG", bankCode = 306),
+        Bank(bankName = "Caixa", bankCode = 307),
+        Bank(bankName = "C6 Bank", bankCode = 308),
+        Bank(bankName = "Nu Pagamentos", bankCode = 309)
     )
 }
 
