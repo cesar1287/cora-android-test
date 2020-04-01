@@ -4,19 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.core.widget.addTextChangedListener
-import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.github.coraandroidtest.core.utils.Mask
 import com.github.coraandroidtest.core.utils.NewContact.HASH_MAP_CPF
+import com.github.coraandroidtest.extensions.setButtonEnabled
+import com.github.coraandroidtest.extensions.setViewBackgroundDisabled
+import com.github.coraandroidtest.extensions.setViewBackgroundEnabled
 
 import com.github.coraandroidtest.newcontact.R
 import com.github.coraandroidtest.newcontact.base.BaseNewContactFragment
-import com.github.coraandroidtest.newcontact.viewmodel.NewContactViewModel
-import com.github.coraandroidtest.R as APP
 import kotlinx.android.synthetic.main.fragment_new_contact_cpf.*
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class NewContactCpfFragment : BaseNewContactFragment() {
 
@@ -37,10 +35,11 @@ class NewContactCpfFragment : BaseNewContactFragment() {
     private fun setupObservables() {
         etNewContactCpf.editText?.addTextChangedListener {
             if (it?.length == Mask.MASK_CPF.length) {
-                acbNewContactCpfNext.isEnabled = true
-                acbNewContactCpfNext.background = ContextCompat.getDrawable(requireContext(), APP.drawable.button_border_enabled)
+                acbNewContactCpfNext.setButtonEnabled(true)
+                acbNewContactCpfNext.setViewBackgroundEnabled(requireContext())
             } else {
-                acbNewContactCpfNext.background = ContextCompat.getDrawable(requireContext(), APP.drawable.button_border_disabled)
+                acbNewContactCpfNext.setButtonEnabled(false)
+                acbNewContactCpfNext.setViewBackgroundDisabled(requireContext())
             }
         }
 
