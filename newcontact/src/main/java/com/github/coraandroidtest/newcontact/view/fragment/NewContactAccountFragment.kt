@@ -49,7 +49,7 @@ class NewContactAccountFragment : BaseNewContactFragment() {
             requireActivity().hideKeyboard(it)
             val cpf = etNewContactAccount.editText?.text.toString()
             viewModel.saveNewContactPartially(HASH_MAP_ACCOUNT, cpf)
-            val action = NewContactCpfFragmentDirections.actionNewContactCpfFragmentToNewContactNameFragment()
+            val action = NewContactAccountFragmentDirections.actionNewContactAccountFragmentToNewContactSuccessFragment()
             view?.findNavController()?.navigate(action)
         }
     }

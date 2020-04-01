@@ -4,54 +4,57 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".view.fragment.NewContactAccountFragment">
+    tools:context=".view.fragment.NewContactSuccessFragment">
 
     <com.github.coraandroidtest.customview.ToolbarCora
         android:id="@+id/tbNewContactToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:toolbarType="new_contact"
-        app:progressToolbarCora="64"
+        app:progressToolbarCora="100"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/ivNewContactSuccess"/>
+
+    <ImageView
+        android:id="@+id/ivNewContactSuccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_person_outline"
+        android:layout_marginTop="@dimen/largeMargin"
+        app:layout_constraintTop_toBottomOf="@+id/tbNewContactToolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <TextView
-        android:id="@+id/tvNewContactAccount"
+        android:id="@+id/tvNewContactSuccessTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         style="@style/TitleNewContact"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constrainedWidth="true"
-        android:text="@string/title_fragment_account"
+        android:text="@string/new_contact_success"
+        app:layout_constraintTop_toBottomOf="@+id/ivNewContactSuccess"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tbNewContactToolbar"/>
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <com.github.coraandroidtest.customview.EditTextCora
-        android:id="@+id/etNewContactAccount"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvNewContactSuccessSubtitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:fieldType="account"
-        android:layout_marginStart="@dimen/largeMargin"
-        android:layout_marginEnd="@dimen/largeMargin"
-        android:layout_marginTop="@dimen/xlargeMargin"
-        app:layout_constraintTop_toBottomOf="@+id/tvNewContactAccount"
+        style="@style/SubtitleNewContact"
+        android:text="@string/subtitle_new_contact_success"
+        app:layout_constraintTop_toBottomOf="@id/tvNewContactSuccessTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/acbNewContactAccountNext"
+        android:id="@+id/acbNewContactSuccess"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/ButtomCoraSuccess.Disabled"
-        android:text="@string/new_contact_register"
-        android:layout_marginStart="@dimen/largeMargin"
-        android:layout_marginEnd="@dimen/largeMargin"
-        android:layout_marginBottom="@dimen/defaultMargin"
-        app:layout_constraintVertical_bias="1.0"
+        style="@style/ButtomCoraSuccess.Enabled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/largeMargin"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,5 +46,14 @@
         android:id="@+id/newContactAccountFragment"
         android:name="com.github.coraandroidtest.newcontact.view.fragment.NewContactAccountFragment"
         android:label="fragment_new_contact_account"
-        tools:layout="@layout/fragment_new_contact_account" />
+        tools:layout="@layout/fragment_new_contact_account" >
+        <action
+            android:id="@+id/action_newContactAccountFragment_to_newContactSuccessFragment"
+            app:destination="@id/newContactSuccessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newContactSuccessFragment"
+        android:name="com.github.coraandroidtest.newcontact.view.fragment.NewContactSuccessFragment"
+        android:label="fragment_new_contact_success"
+        tools:layout="@layout/fragment_new_contact_success" />
 </navigation>

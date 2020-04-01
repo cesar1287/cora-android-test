@@ -3,4 +3,8 @@
     <string name="title_fragment_name">Qual o nome completo?</string>
     <string name="title_fragment_agency">Digite o número da agência sem o dígito</string>
     <string name="title_fragment_account">Informe o número da conta com o dígito</string>
+
+    <string name="new_contact_success">Novo contato cadastrado!</string>
+    <string name="subtitle_new_contact_success">Esse contato aparecerá na sua lista ao fazer uma transferência ou emitir um boleto.</string>
+    <string name="new_contact_register">Concluir cadastro</string>
 </resources>

@@ -10,4 +10,13 @@
         <item name="android:layout_marginTop">@dimen/xlargeMargin</item>
     </style>
 
+    <style name="SubtitleNewContact">
+        <item name="android:textSize">@dimen/default_name_size</item>
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:layout_marginStart">@dimen/largeMargin</item>
+        <item name="android:layout_marginEnd">@dimen/largeMargin</item>
+        <item name="android:layout_marginTop">@dimen/minimumMargin</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>
