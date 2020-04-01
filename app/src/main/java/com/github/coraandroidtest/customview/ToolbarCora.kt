@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.content.pm.PackageManager
 import android.util.AttributeSet
+import android.widget.ImageView
 import androidx.constraintlayout.widget.ConstraintLayout
 import com.github.coraandroidtest.R
 import com.github.coraandroidtest.core.utils.Toolbar.TOOL_BAR_TYPE_CONTACTS
@@ -21,6 +22,10 @@ class ToolbarCora @JvmOverloads constructor(
     private var toolbarTitleString: String? = null
 
     private var toolbarProgress: Int? = null
+
+    var listener: ToolBarItauListener? = null
+
+    var backButton: ImageView? = null
 
     init {
         setupStyleables(attrs)
@@ -76,15 +81,16 @@ class ToolbarCora @JvmOverloads constructor(
     }
 
     private fun initView() {
+        backButton = findViewById(R.id.ivToolbarArrow)
+
         setDefaultTitle()
         setListener()
     }
 
     private fun setListener() {
-//        backButton?.setOnClickListener { listener?.onBackPressedToolbar() }
-//        buttonChoose?.setOnClickListener { listener?.onClickChooseProduct() }
-//        iconHelp?.setOnClickListener { listener?.onClickHelp() }
-//        iconClose?.setOnClickListener { listener?.onBackPressedToolbar() }
+        backButton?.setOnClickListener {
+            listener?.onBackPressedToolbar()
+        }
     }
 
     private fun setTitle(title: String?) {
@@ -118,7 +124,5 @@ class ToolbarCora @JvmOverloads constructor(
 
     interface ToolBarItauListener {
         fun onBackPressedToolbar()
-        fun onClickChooseProduct()
-        fun onClickHelp()
     }
 }

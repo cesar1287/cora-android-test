@@ -30,6 +30,7 @@ class NewContactNameFragment : BaseNewContactFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupObservables()
+        tbNewContactToolbar.listener = this
     }
 
     private fun setupObservables() {

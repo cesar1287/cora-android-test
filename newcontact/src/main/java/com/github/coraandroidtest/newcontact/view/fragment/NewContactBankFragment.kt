@@ -34,6 +34,7 @@ class NewContactBankFragment : BaseNewContactFragment(), BankListener {
 
         viewModel.getAllBanks()
         setupObservables()
+        tbNewContactToolbar.listener = this
     }
 
     private fun setupObservables() {

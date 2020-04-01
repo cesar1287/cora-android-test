@@ -7,9 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.github.coraandroidtest.newcontact.R
+import com.github.coraandroidtest.newcontact.base.BaseNewContactFragment
 import kotlinx.android.synthetic.main.fragment_new_contact_success.*
 
-class NewContactSuccessFragment : Fragment() {
+class NewContactSuccessFragment : BaseNewContactFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,6 +24,7 @@ class NewContactSuccessFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setupObservables()
+        tbNewContactToolbar.listener = this
     }
 
     private fun setupObservables() {
